@@ -14,6 +14,8 @@ main:
   #   url: /sitemap/
   - title: "JAVASCRIPT"
     url: /javascript/
+  - title: "STEM"
+    url: /stem/
 
 sidebar-category:
   - title: "javascript"
@@ -21,3 +23,9 @@ sidebar-category:
       - title: "계산기 만들기"
         url: "javascript/calculator/"
         category: "calculator"
+
+  - title: "STEM"
+    children:
+      - title: "math"
+        url: "stem/math/"
+        category: "math"
