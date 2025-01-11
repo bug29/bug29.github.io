@@ -1,18 +1,12 @@
 ---
-layout: page
+layout: single
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+- **nick** : bug
+- **what** : web coder for education contents
+    - front end (javascript)
+    - sometimes python, a little bit
+    - ~~actionscript (a.k.a flash, R.I.P), long long ago...~~
+- **blog** : [blog.naver.com/bug29](http://blog.naver.com/bug29)

@@ -1,0 +1,23 @@
+# main links
+main:
+  #- title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: /about/
+  # - title: "Year"
+  #   url: /year-archive/
+  # - title: "Pages"
+  #   url: /page-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  - title: "JAVASCRIPT"
+    url: /javascript/
+
+sidebar-category:
+  - title: "javascript"
+    children:
+      - title: "계산기 만들기"
+        url: "javascript/calculator/"
+        category: "calculator"
