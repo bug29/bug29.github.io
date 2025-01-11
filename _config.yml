@@ -3,7 +3,8 @@
 
 # Theme Settings
 theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes@4.26.2"
+remote_theme           : "mmistakes/minimal-mistakes"
+# remote_theme           : "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin    : "dirt"
 
 # Site Settings
@@ -267,9 +268,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-include-cache
-  - jekyll-remote-theme
 
 
 # Archives
