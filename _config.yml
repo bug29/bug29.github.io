@@ -17,7 +17,7 @@ description              : "web coder"
 
 url                      : "https://bug29.github.io"
 # baseurl                  : "/bug29"
-repository               : "bug29/bug29"
+repository               : "bug29/bug29.github.io"
 scripts                  : "https://code.jquery.com/jquery-3.2.1.min.js"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/masthead_logo.png"
