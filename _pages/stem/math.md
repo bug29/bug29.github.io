@@ -17,7 +17,7 @@ sidebar:
 {% assign posts_with_stem = site.posts | where: "categories", "stem" %}
 {% assign posts_with_stem_and_math = posts_with_stem | where: "categories", "math" %}
 
-{% assign sorted_posts = posts_with_stem_and_math | sort: "date" %}
+{% assign sorted_posts = posts_with_stem_and_math | sort: "date" | reverse %}
 
 {% for post in sorted_posts %}
   {% include archive-single.html type=page.entries_layout %}

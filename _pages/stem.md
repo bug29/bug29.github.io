@@ -9,6 +9,9 @@ sidebar:
   enabled: true
 ---
 
+{: .notice--warning}
+Science, Technology, Engineering, and Mathematics
+
 ---
 {% assign posts_with_stem = site.posts | where: "categories", "stem" %}
 

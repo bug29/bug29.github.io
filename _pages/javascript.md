@@ -9,6 +9,9 @@ sidebar:
   enabled: true
 ---
 
+{: .notice--warning}
+javascript로 코딩하기
+
 ---
 {% assign posts_with_javascript = site.posts | where: "categories", "javascript" %}
 
