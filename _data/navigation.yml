@@ -23,6 +23,9 @@ sidebar-category:
       - title: "계산기 만들기"
         url: "javascript/calculator/"
         category: "calculator"
+      - title: "게임"
+        url: "javascript/games/"
+        category: "games"
 
   - title: "STEM"
     children:
