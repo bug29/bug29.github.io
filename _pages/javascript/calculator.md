@@ -1,6 +1,7 @@
 ---
 title: "계산기 만들기"
 layout: category
+parent: javascript
 permalink: /javascript/calculator/
 categories: [javascript, calculator]
 author_profile: true

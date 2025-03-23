@@ -1,0 +1,82 @@
+---
+title: '[계산기 만들기] 작업물'
+date: 2024-12-30 14:00:00 +09:00
+last_modified_at : 2024-12-31 10:30:00 +09:00
+categories: [javascript, calculator]
+tags: [calculator, jquery, javascript, decimal.js]
+excerpt: "작업물"
+toc: true
+toc_sticky: true
+use_math: false
+---
+
+<!DOCTYPE html>
+<html lang="ko" data-whatinput="keyboard" data-whatintent="mouse" class="whatinput-types-initial fa-events-icons-ready whatinput-types-keyboard">
+  
+<head>
+  <title>계산기</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="post" />
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/9.0.0/decimal.min.js"></script>
+  <script type="text/javascript" src="{{site.baseurl}}/assets/custom/calculator/calculator.js"></script>
+</head>
+
+<script>
+  $(document).ready(function() {
+    Calc.init();
+  });
+</script>
+
+<style>
+  #calculator { width: 160px; text-align: center; }
+  .view-wrap { width: 100%; height: 120px; margin-bottom: 10px; }
+  .view-wrap .container { width: 100%; height: 100%; padding: 10px; text-align: right; background-color: #eee; }
+  .button-wrap { width: 100%; }
+  .button-wrap button { width: 36px; height: 36px; vertical-align: top; margin-bottom: 6px; }
+  .button-wrap button[value="clear"],
+  .button-wrap button[value="back"] { width: 76px; }
+  .button-wrap button[value="0"] { width: 116px; }
+</style>
+
+<body>
+  <section class="game-wrap">
+    <div class="header"></div>
+    <h1 id="계산기">계산기</h1>
+    <div id="calculator">
+      <div class="view-wrap">
+        <div class="container"></div>
+      </div>
+      <div class="button-wrap">
+        <button value="clear">C</button>
+        <button value="back">⌫</button>
+
+        <button value="(">(</button>
+        <button value=")">)</button>
+        <button value=".">.</button>
+        <button value="/">÷</button>
+
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button value="*">×</button>
+
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="*">-</button>
+
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="+">+</button>
+
+        <button value="0">0</button>
+        <button value="=">=</button>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

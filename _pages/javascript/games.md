@@ -1,6 +1,7 @@
 ---
 title: "게임"
 layout: category
+parent: javascript
 permalink: /javascript/games/
 categories: [javascript, games]
 author_profile: true

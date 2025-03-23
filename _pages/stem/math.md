@@ -1,6 +1,7 @@
 ---
 title: "Mathematics"
 layout: category
+parent: stem
 permalink: /stem/math/
 categories: [stem, math]
 author_profile: true
