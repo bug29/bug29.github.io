@@ -14,6 +14,8 @@ main:
   #   url: /sitemap/
   - title: "JAVASCRIPT"
     url: /javascript/
+  - title: "PYTHON"
+    url: /python/
   - title: "STEM"
     url: /stem/
 
@@ -26,6 +28,12 @@ sidebar-category:
       - title: "게임"
         url: "javascript/games/"
         category: "games"
+
+  - title: "python"
+    children:
+      - title: "엑셀 데이터 변환기"
+        url: "python/xlsxToJson/"
+        category: "json"
 
   - title: "STEM"
     children:
