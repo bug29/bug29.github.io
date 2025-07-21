@@ -1,0 +1,112 @@
+---
+title: 카프리카 상수
+date: 2025-07-20 22:30:00 +09:00
+last_modified_at : 2025-03-11 22:30:00 +09:00
+categories: [stem, math]
+tags: [math, 카프리카상수, '6174']
+excerpt: "카프리카 상수 (A.K.A 6174)"
+toc: true
+toc_sticky: true
+use_math: false
+---
+
+<!DOCTYPE html>
+<html lang="ko" data-whatinput="keyboard" data-whatintent="mouse" class="whatinput-types-initial fa-events-icons-ready whatinput-types-keyboard">
+  
+<head>
+  <title>카프리카 상수 (A.K.A 6174)</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="post" />
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      const $input = $(".content-wrap .ui-wrap #input");
+      $(".content-wrap .ui-wrap .btn-submit").on("click", (e) => {
+        let v = parseInt($input.val());
+
+        if(isNaN(v)) alert("숫자만 넣어주세요.");
+        else if(parseInt(v) > 9999) alert("네자리 수 까지만 가능합니다.");
+        else if(parseInt(v) < 100) alert("세자리 수를 넣어 주세요.");
+        else if(String(v).indexOf(".")>=0) alert("자연수만 가능해요.");
+        else if(new Set(v.toString()).size <= 1) alert("하나 이상 다른 숫자가 있어야 합니다.");
+        else operate(v);
+      });
+
+      function operate(_v) {
+        let v = _v;
+        let count = 0;
+        let result = 0;
+
+        $(".content-wrap .view-wrap").empty().append(`<div class="output"></div>`);
+        while(v!=result) {
+          result = v;
+          let a = compute(v);
+          let code = `<div class="count">${count}</div>`;
+          code += `<div class="formula">${a[0]} - ${a[1]} = </div>`;
+          code += `<div class="result">${a[2]}</div>`;
+          v = a[2];
+          $(".content-wrap .view-wrap .output").append(code);
+
+          if((++count)%1000==0) {
+            if(!confirm("연산을 계속 진행할까요?")) return;
+          }
+          
+          if(count%10 == 0) $(".content-wrap .view-wrap .output").append(`<div class="line"></div><div class="line"></div><div class="line"></div>`)
+        }
+      }
+
+      function compute(_v) {
+        let low = String(_v).split("").sort(function(a, b)  {
+          if(a > b) return 1;
+          if(a === b) return 0;
+          if(a < b) return -1;
+        });
+
+        let high = String(_v).split("").sort(function(a, b)  {
+          if(a > b) return -1;
+          if(a === b) return 0;
+          if(a < b) return 1;
+        });
+
+        return [parseInt(high.join("")), parseInt(low.join("")), parseInt(high.join("")) - parseInt(low.join(""))];
+      }
+    });
+  </script>
+
+  <style>
+    .content-wrap .ui-wrap #input { width: 320px; }
+    .content-wrap .view-wrap .output {
+      position: relative;
+      display: grid;
+      grid-template-columns: 40px 120px 60px;
+    }
+    .content-wrap .view-wrap .output>div:not(.line) { text-align: right; }
+    .content-wrap .view-wrap .output .line { height: 1px; border-top: 1px dotted #999; }
+    .content-wrap .view-wrap .output .result { padding-right: 10px; }
+  </style>
+</head>
+
+<body>
+  <section class="content-wrap">
+    <div class="info-wrap">
+      <h2>카프리카 상수 (Kaprekar's constant)</h2>
+      <blockquote>인도의 수학자 카프리카가 1955년 발견한 수로, 그의 이름을 따서 <strong>카프리카 수</strong>라고 한다.<br/>
+      (ref. <a href="https://namu.wiki/w/카프리카 수" target="blank">"https://namu.wiki/w/카프리카 수"</a>)</blockquote>
+      <ul>
+        <li>3자리 또는 4자리 정수를 선택하여 이 숫자 조합이 이룰 수 있는 최댓값에서 최솟값을 빼고 다시 이 수를 이용하여 최댓값에서 최솟값을 빼는 작업을 반복하면, 3자리의 경우는 <strong>495</strong>, 4자리의 경우는 <strong>6174</strong>에서 멈추는 것을 알 수 있습니다.</li>
+        <li>단, 같은 숫자로만 이루어진 수는 차가 0이므로 최종값은 <strong>0</strong>이 됩니다.</li>
+        <li>그리고, 간혹 모두 같지 않아도 <strong>0</strong>으로 반복되는 수가 있습니다. (예: 1112, 112 등)</li>
+        <li>추가로, <i>"자신의 제곱수를 임의의 두 부분으로 나누어 더하면 다시 원래의 수가 되는 수"</i> (예: 55<sup>2</sup> = 3025, 30 + 25 = 55)도 <strong> 카프리카의 수</strong>라고 합니다.</li>
+        <li>증명은 생략합니다. (어려워요...)</li>
+      </ul>
+    </div>
+    <div class="ui-wrap">
+      <h2>카프리카 상수 테스트 해 보기</h2>
+      <input id="input" type="number" maxlength="4" placeholder="네자리 수를 입력하세요." /> <button class="btn-submit">결과</button>
+    </div>
+    <div class="view-wrap"></div>
+  </section>
+</body>
+
+</html>
